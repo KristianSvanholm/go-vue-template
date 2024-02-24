@@ -1,15 +1,15 @@
 version: '3.5'
 services:
-  igparser:
+  go_vue_template:
     privileged: false
     build: .
     restart: always
     volumes:
       - "./logs:/logs"
     environment:
-      IG_PARSER_PORT: "8080"
-      IG_PARSER_LOGGING: "true"
-      IG_PARSER_LOGGING_PATH: "/logs"
+      GO_VUE_TEMPLATE_PORT: "8080"
+      GO_VUE_TEMPLAT_LOGGING: "true"
+      GO_VUE_TEMPLATE_LOGGING_PATH: "/logs"
     ports:
       - '4040:8080'
     network_mode: "host"
